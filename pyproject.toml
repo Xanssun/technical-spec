@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "technical-spec"
+version = "0.1.0"
+description = ""
+authors = ["xanssun <xanssun@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.115.6"}
+tronpy = "^0.5.0"
+sqlalchemy = "^2.0.36"
+alembic = "^1.14.0"
+asyncpg = "^0.30.0"
+psycopg2 = "^2.9.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -8,7 +8,10 @@ WORKDIR /app
 RUN apt update -y && \
     apt install -y python3-dev \
     gcc \
-    musl-dev
+    libpq-dev \
+    musl-dev \
+    postgresql-client && \
+    rm -rf /var/lib/apt/lists/*
 
 ADD pyproject.toml /app
 
