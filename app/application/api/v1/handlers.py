@@ -35,5 +35,5 @@ async def wallet(
 async def get_wallets(
     pagination: PaginationSchema = Depends(),
     tron_service: TronService = Depends(get_tron_service)
-) -> BaseTronResponseSchema:
+) -> List[BaseTronResponseSchema]:
     return await tron_service.get_wallets(pagination=pagination)
